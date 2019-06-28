@@ -12,9 +12,15 @@ var left = 0;
 
 document.onkeyup = function(){
 
-    //store user input
+    //store user choice
     var userguess = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(userguess);
+
+
+
+    //store computer choice
+    var pcguess = letters[Math.floor(Math.random() * letters.length)];
+    console.log(pcguess);
 
     
 
