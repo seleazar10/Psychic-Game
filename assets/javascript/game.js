@@ -1,20 +1,31 @@
 
 
 
-// counter
+// variables
 var letters = ["a", "b", "c", 'e'];
+var choices = [' '];
+
+
 var wins = 0;
 var losses = 0;
 var left = 0;
+
+
+
 
 
 //event
 
 document.onkeyup = function(){
 
+
+
+   
+
     //store user choice
     var userguess = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(userguess);
+    choices.push(userguess);
 
 
 
@@ -42,7 +53,7 @@ document.onkeyup = function(){
     "<p>Wins: " + wins + "</p>" + 
     "<p>Losses: " + losses + "</p>"+ 
     "<p>Guesses Left: " + (10 - left) + "</p>" +
-    "<p>Your Guesses so far: </p>";
+    "<p>Your Guesses so far: " + "" +  " </p>";
 
 
     //getElement - display
