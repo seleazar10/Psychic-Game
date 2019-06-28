@@ -22,16 +22,20 @@ document.onkeyup = function(){
     var pcguess = letters[Math.floor(Math.random() * letters.length)];
     console.log(pcguess);
 
-
+    //if-else statement
 
     if (userguess == pcguess) {
         wins++;
-        console.log('You won!')
+        console.log('You won! '+ wins)
         
     }else{
         losses++;
-        console.log('You lost!')
+        console.log('You lost! '+ losses)
     }
+
+
+    //display stat to user
+    
 
 
 }
