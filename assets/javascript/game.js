@@ -34,6 +34,8 @@ document.onkeyup = function () {
     var pcguess = letters[Math.floor(Math.random() * letters.length)];
     console.log(pcguess);
 
+    
+
     //if-else statement
 
     if (userguess == pcguess) {
@@ -53,7 +55,7 @@ document.onkeyup = function () {
     var stato = "<p>Guess what letter I'm thinking of</p>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + (10 - left) + "</p>" +
+        "<p>Guesses Left: " + (50 - left) + "</p>" +
         "<p>Your Guesses so far: " + (choices) + "</p>";
 
 
