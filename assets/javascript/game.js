@@ -3,7 +3,7 @@
 
 // variables
 var letters = ["a", "b", "c", 'e'];
-var choices = [' '];
+var choices = [];
 
 
 var wins = 0;
@@ -53,7 +53,7 @@ document.onkeyup = function(){
     "<p>Wins: " + wins + "</p>" + 
     "<p>Losses: " + losses + "</p>"+ 
     "<p>Guesses Left: " + (10 - left) + "</p>" +
-    "<p>Your Guesses so far: " + "" +  " </p>";
+    "<p>Your Guesses so far: " + (choices) + "</p>";
 
 
     //getElement - display
