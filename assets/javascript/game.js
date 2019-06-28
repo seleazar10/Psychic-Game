@@ -25,17 +25,27 @@ document.onkeyup = function(){
     //if-else statement
 
     if (userguess == pcguess) {
+        left++;
         wins++;
-        console.log('You won! '+ wins)
+        console.log('You won! '+ wins+ ' '+ left )
         
     }else{
+        left++;
         losses++;
-        console.log('You lost! '+ losses)
+        console.log('You lost! '+ losses + ' '+ left)
     }
 
 
     //display stat to user
+
+    var stato = "<p>Guess what letter I'm thinking of</p>" + 
+    "<p>Wins: " + wins + "</p>" + 
+    "<p>Losses: " + losses + "</p>"+ 
+    "<p>Guesses Left: " + (10 - left) + "</p>" ;
+
+
     
+
 
 
 }
