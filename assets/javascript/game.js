@@ -44,8 +44,9 @@ document.onkeyup = function(){
     "<p>Guesses Left: " + (10 - left) + "</p>" ;
 
 
-    
+    //getElement
 
+    document.querySelector('#gamo').innerHTML = stato;
 
 
 }
