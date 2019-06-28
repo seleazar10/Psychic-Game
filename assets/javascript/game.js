@@ -2,7 +2,7 @@
 
 
 // counter
-var letters = ["a", "b", "c"];
+var letters = ["a", "b", "c", 'e'];
 var wins = 0;
 var losses = 0;
 var left = 0;
@@ -36,15 +36,16 @@ document.onkeyup = function(){
     }
 
 
-    //display stat to user
+    //upon start - display stat to user
 
     var stato = "<p>Guess what letter I'm thinking of</p>" + 
     "<p>Wins: " + wins + "</p>" + 
     "<p>Losses: " + losses + "</p>"+ 
-    "<p>Guesses Left: " + (10 - left) + "</p>" ;
+    "<p>Guesses Left: " + (10 - left) + "</p>" +
+    "<p>Your Guesses so far: </p>";
 
 
-    //getElement
+    //getElement - display
 
     document.querySelector('#gamo').innerHTML = stato;
 
