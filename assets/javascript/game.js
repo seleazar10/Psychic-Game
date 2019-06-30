@@ -5,11 +5,42 @@
 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", 
 "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
 var choices = [];
+var pcguess; 
 
 
+
+//counter
 var wins = 0;
 var losses = 0;
-var left = 0;
+var left = 10;
+
+
+
+//restart
+
+function restart() {
+
+    
+    choices = []
+ 
+    
+}
+
+function askToPlayAgain() {
+    var nextROund = confirm("Press OK to play again!");
+    if (nextROund== true){
+        restart();
+        
+    }else{
+        
+        left = 0;
+        
+
+    }
+        
+}
+
+
 
 
 
@@ -17,36 +48,48 @@ var left = 0;
 
 //event
 
-document.onkeyup = function () {
+document.onkeyup = function(event) {
 
 
 
 
 
     //store user choice
-    var userguess = String.fromCharCode(event.keyCode).toUpperCase();
+    var userguess = event.key.toLocaleUpperCase();
     console.log(userguess);
     choices.push(userguess);
 
 
 
-    //store computer choice
+    // store computer choice 
     var pcguess = letters[Math.floor(Math.random() * letters.length)];
     console.log(pcguess);
 
-    
+
+  
+
 
     //if-else statement
 
-    if (userguess == pcguess) {
-        left++;
+    if (userguess === pcguess) {
+        left = 10;
         wins++;
         console.log('You won! ' + wins + ' ' + left)
+        askToPlayAgain();
+
 
     } else {
-        left++;
-        losses++;
-        console.log('You lost! ' + losses + ' ' + left)
+        left--;
+        if(left < 0){
+            left = 10;
+            losses++;
+            console.log('You lost! ' + losses + ' ' + left)
+            askToPlayAgain();
+
+
+        }
+              
+        
     }
 
 
@@ -55,7 +98,7 @@ document.onkeyup = function () {
     var stato = "<p>Guess what letter I'm thinking of</p>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + (50 - left) + "</p>" +
+        "<p>Guesses Left: " + (left) + "</p>" +
         "<p>Your Guesses so far: " + (choices) + "</p>";
 
 
