@@ -10,7 +10,7 @@ var pcchoices = [];
 
 
 
-//counter
+//counter 
 var wins = 0;
 var losses = 0;
 var left = 10;
@@ -28,21 +28,20 @@ function restart() {
 }
 
 function askToPlayAgain() {
-    var nextROund = confirm("Press OK to play again!");
-    if (nextROund== true){
+    var nextRound = confirm("Press OK to play again!");
+    if (nextRound== true){
         restart();
         
     }else{
         
         left = 0;
+        // var persist = confirm('Why are you scared Oz!!! Press OK to try one last time! :)')
+               
         
 
     }
         
 }
-
-
-
 
 
 
@@ -97,7 +96,7 @@ document.onkeyup = function(event) {
 
     //upon start - display stat to user
 
-    var stato = "<p>Guess what letter I'm thinking of</p>" +
+    var stato = "<p>Guess what letter I'm thinking of!</p>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
         "<p>Guesses Left: " + (left) + "</p>" +
