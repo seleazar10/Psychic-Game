@@ -3,9 +3,10 @@
 
 // variables
 var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", 
-"Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+"Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var choices = [];
-var pcguess; 
+var pcchoices = [];
+
 
 
 
@@ -64,6 +65,7 @@ document.onkeyup = function(event) {
     // store computer choice 
     var pcguess = letters[Math.floor(Math.random() * letters.length)];
     console.log(pcguess);
+    pcchoices.push(pcguess);
 
 
   
@@ -74,7 +76,7 @@ document.onkeyup = function(event) {
     if (userguess === pcguess) {
         left = 10;
         wins++;
-        console.log('You won! ' + wins + ' ' + left)
+        console.log('You won! ' + wins + ' Left: ' + left)
         askToPlayAgain();
 
 
@@ -83,7 +85,7 @@ document.onkeyup = function(event) {
         if(left < 0){
             left = 10;
             losses++;
-            console.log('You lost! ' + losses + ' ' + left)
+            console.log('You lost! ' + losses + ' Left: ' + left)
             askToPlayAgain();
 
 
