@@ -23,6 +23,7 @@ function restart() {
 
     
     choices = []
+    
  
     
 }
@@ -35,6 +36,7 @@ function askToPlayAgain() {
     }else{
         
         left = 0;
+        choices = [];
         // var persist = confirm('Why are you scared Oz!!! Press OK to try one last time! :)')
                
         
